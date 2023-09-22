@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>페이지의 전체구조</title>
+	<link href="css/main.css" type="text/css" rel="stylesheet" >
+	<link href="css/subpage.css" type="text/css" rel="stylesheet" >
+	<script type="text/javascript">
+		function check() {
+			if (document.find_frm.find_box.value == "") {
+				alert("검색어를 입력해 주세요");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="warp">
+	<header>
+		<div id="login"><a href="#">Login</a> | <a href="#">Join</a></div>
+ 		<div class="clear"></div>
+		<div id="logo">
+			<img src="images/logo.png" width="285" height="62" alt="Javaline Web">
+		</div>
+		<nav id="top_menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Who is Tommy.Lee?</a></li>
+				<li><a href="#">Member</a></li>
+				<li><a href="#">Board</a></li>
+				<li><a href="#">Ajax Board</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="sub_img">
+	</div>
+	<nav id="sub_menu">
+		<ul>
+			<li><a href="#">Login</a>
+			<li><a href="#">Join Us</a>
+			<li><a href="#">Board</a>
+			<li><a href="#">Ajax Board</a>
+		</ul>
+	</nav>
+		<article id="contents">
+			<h1>Board</h1>
+			<input type="button" value="write" class="btn"/>
+			<table id="board">
+				<tr>
+					<th class="tno">NO.</th>
+					<th class="twriter">Writer</th>
+					<th class="ttitle">Title</th>
+					<th class="tread">Read</th>
+					<th class="tdate">Date</th>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>Mr.Hong</td>
+					<td class="left">Hi.Hello.Nice to meet you :)</td>
+					<td>1004</td>
+					<td>2023-09-21</td>
+				</tr>
+			</table>
+			<div class="clear"></div>
+			<form method="post" name="find_frm" action="#" onsubmit="return check()">
+				<div id="table_search">
+					<select class="select_box" name="find" size="1">
+						<option value="writer">이름</option>
+						<option value="subject">제목</option>
+						<option value="content">내용</option>
+					</select> <input type="text" class="input_box" name="find_box" /> <input
+						type="submit" value="search" class="btn"/>
+				</div>
+			</form>
+			<div class="clear"></div>
+			<div id="page_control">
+				<a href="#">Prev</a><a href="#">1</a><a href="#">2</a> <a href="#">3</a><a
+					href="#">4</a><a href="#">5</a> <a href="#">6</a><a href="#">7</a><a
+					href="#">8</a> <a href="#">9</a><a href="#">10</a><a href="#">Next</a>
+			</div>
+		</article>
+	<footer>
+	 	<hr>
+		<div id="copy">
+		All contents copyright 2023 Gildong Hong all rights reserved<br>
+		Email : honghong@gmail.com | Contact : 010-1234-5678
+		</div>
+		<div id="social">
+		<img src="images/facebook.gif" width="33" height="33" alt="Facdebook">
+		<img src="images/twitter.gif" width="33" height="34" alt="Twitter">
+		</div>
+	</footer>
+	</div>
+</body>
+</html>

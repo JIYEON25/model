@@ -1,0 +1,10 @@
+127.0.0.1 - - [07/Sep/2023:11:05:46 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [07/Sep/2023:11:05:46 +0900] "GET /myHTML/default.html HTTP/1.1" 200 1905
+0:0:0:0:0:0:0:1 - - [07/Sep/2023:11:05:46 +0900] "GET /myHTML/default.css HTTP/1.1" 404 788
+0:0:0:0:0:0:0:1 - - [07/Sep/2023:11:05:46 +0900] "GET /myHTML/css/subpage.css HTTP/1.1" 200 1217
+0:0:0:0:0:0:0:1 - - [07/Sep/2023:11:05:46 +0900] "GET /myHTML/images/logo.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Sep/2023:11:05:46 +0900] "GET /myHTML/images/twitter.gif HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Sep/2023:11:05:46 +0900] "GET /myHTML/images/facebook.gif HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Sep/2023:11:05:46 +0900] "GET /myHTML/images/t_back.jpg HTTP/1.1" 200 1238
+0:0:0:0:0:0:0:1 - - [07/Sep/2023:11:05:46 +0900] "GET /favicon.ico HTTP/1.1" 404 777
+0:0:0:0:0:0:0:1 - - [07/Sep/2023:11:05:46 +0900] "GET /myHTML/default.html HTTP/1.1" 200 1905

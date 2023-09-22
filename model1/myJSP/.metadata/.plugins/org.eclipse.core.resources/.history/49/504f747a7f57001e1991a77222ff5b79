@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%!
+	public String getParam(HttpServletRequest request, String paramName) {
+		if(request.getParameter(paramName) != null) {
+			return request.getParameter(paramName);
+		} else {
+			return "";
+		}
+	}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

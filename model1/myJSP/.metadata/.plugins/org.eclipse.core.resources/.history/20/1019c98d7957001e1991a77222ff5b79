@@ -1,0 +1,39 @@
+<%@page import="java.util.Enumeration"%>
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
+<%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String uploadPath=application.getRealPath("upload");
+	int size = 10*1024*1024;
+	String name = "";
+	String subject = "";
+	String fileName1 = "";
+	String fileName2 = "";
+	String origFileName1 = "";
+	String origFileName2 = "";
+	
+	try {
+		MultipartRequest multi = new MultipartRequest(request, uploadPath, size, "UTF-8", new DefaultFileRenamePolicy());
+		name = multi.getParameter("name");
+		subject = multi.getParameter("subject");
+		Enumeration files = multi.getFileNames();
+		String file1 = (String)files.nextElement();
+		fileName1 = multi.getFilesystemName(file1);
+		origFileName1 = multi.getOriginalFileName(file1);
+		fileName2 = multi.getFilesystemName(file2);
+		origFileName2 = multi.getOriginalFileName(file2);
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

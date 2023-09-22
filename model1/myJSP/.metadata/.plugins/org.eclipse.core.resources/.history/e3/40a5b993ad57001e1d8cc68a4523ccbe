@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="default.css">
+  <link type="text/css" rel="stylesheet" href="subpage.css">
+  <title>페이지 전체 구조</title>
+</head>
+<body>
+<div id="warp">
+  <header>
+    <div id="logo">
+    <div id="login"><a href="#">Login</a> | <a href="#">Join</a></div>
+		<div class="clear"></div>
+      <img src="images/logo.png" width="265" height="62" alt="Javaline Web">
+    </div>
+    <div>
+    <nav id="top_menu">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Who is Tommy.Lee?</a></li>
+			<li><a href="#">Member</a></li>
+			<li><a href="#">Board</a></li>
+			<li><a href="#">Ajax Board</a></li>
+		</ul>
+	</nav>
+	</div>
+	</header>
+	<div id="sub_img"></div>
+    <!--왼쪽의 서브메뉴가 들어가는 곳-->
+  <nav id="sub_menu">
+		<ul>
+			<li><a href="#">Login</a>
+			<li><a href="#">Join Us</a>
+			<li><a href="#">Board</a>
+			<li><a href="#">Ajax Board</a>
+		</ul>
+	</nav>
+	<!--실제 내용 콘텐츠가 들어가는 곳-->
+	<article>
+		<h1>Board</h1>
+		<table id="board">
+			<tr>
+				<th class="tno">NO.</th>
+				<th class="twriter">Writer</th>
+				<th class="ttitle">Title</th>
+				<th class="tread">Read</th>
+				<th class="tdate">Date</th>
+			</tr>
+			<tr>
+				<td>&nbsp</td>
+				<td>&nbsp</td>
+				<td class="left">&nbsp</td>
+				<td>&nbsp</td>
+				<td>&nbsp</td>
+			</tr>
+		</table>
+	</article>
+	<!-- 푸터가 들어가는 곳 -->
+	<footer>
+		<hr>
+		<div id="copy">
+		All contents copyright 2015 Tommy. Lee. all rights reserved<br>
+		Contact mail : stdio@hanmail.net Tel : 010-9531-0114
+		</div>
+		<div id="social">
+		<img src="images/facebook.gif" width="33" height="33" alt="Facdebook">
+		<img src="images/twitter.gif" width="33" height="34" alt="Twitter">
+		</div>
+	</footer>
+  
+ </div>
+</body>
+</html>

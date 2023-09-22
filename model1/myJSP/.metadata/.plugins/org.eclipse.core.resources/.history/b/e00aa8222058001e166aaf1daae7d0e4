@@ -1,0 +1,31 @@
+<%@page import="actiontag.Customer"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	ArrayList<String> singer = new ArrayList<String>();
+	singer.add("Ed Sheeran");
+	singer.add("Charlie Puth");
+	request.setAttribute("singer", singer);
+	
+	Customer[] customer = new Customer[2];
+	customer[0] = new Customer();
+	customer[0].setName("Kim");
+	customer[0].setEmail("kim@gmail.com");
+	customer[0].setPhone("010-1111-0000");
+	customer[1] = new Customer();
+	customer[1].setName("Hong");
+	customer[1].setEmail("hong@gmail.com");
+	customer[1].setPhone("010-3333-2222");
+	
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

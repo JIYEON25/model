@@ -1,0 +1,65 @@
+package boardOne;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class BoardDAO {
+	private static BoardDAO instance = null;
+	
+	private BoardDAO() { }
+	
+	/**
+	 * singleton
+	 */
+	public static BoardDAO getInstance() {
+		if(instance == null) {
+			synchronized(BoardDAO.class) {
+				instance = new BoardDAO();
+			}
+		}
+		return instance;
+	}
+	
+	public void insertArticle(BoardVO article) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		int num = article.getNum();
+		int ref = article.getRef();
+		int step = article.getStep();
+		int depth = article.getDepth();
+		int number = 0;
+		String sql = "";
+		try {
+			conn = ConnUtil.getConnection();
+			pstmt = conn.prepareStatement("select max(num) from board");
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				number = rs.getInt(1) + 1;
+			} else {
+				number = 1;
+			}
+			if(num != 0) {
+				sql = "update board set step=step+1 where ref = ? and step > ?";
+				pstmt.getConnection().prepareStatement(sql);
+				pstmt.setInt(1, ref);
+				pstmt.setInt(2, step);
+				pstmt.executeUpdate();
+				step = step + 1;
+				depth = depth + 1;
+			} else {
+				ref = number;
+				step = 0;
+				depth = 0;
+			}
+			
+			sql = "insert into board(num, writer, email, subject, pass, regdate, ref, step, depth, content, ip) values(board_seq.nextval, ?,?,?,?,?,?,?,?,?,?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, article.getWriter());
+			
+		}
+	}
+	
+	
+}

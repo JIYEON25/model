@@ -1,0 +1,32 @@
+<%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	String realFolder = "";
+	String saveFolder = "upload";
+	String encType = "UTF-8";
+	int maxSize = 10*1024*1024;
+	ServletContext context = getServletContext();
+	realFolder = context.getRealPath(saveFolder);
+	ArrayList saveFiles = new ArrayList();
+	ArrayList origFiles = new ArrayList();
+	String paramUser = "";
+	String paramTitle = "";
+	String paramAbstract = "";
+	try {
+		MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
+		paramUser = nulti.getParameter("txtUser");
+		
+	}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

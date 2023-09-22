@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="css/default.css" type="text/css" rel="stylesheet" >
+	<title>페이지의 전체구조</title>
+</head>
+<body>
+<!-- 헤더파일 들어가는곳 -->
+	<header>
+		<div id="logo">
+			<img src="images/logo.png" width="285" height="62" alt="Javaline Web">
+		</div>
+		<nav>
+<!-- 			위의 메인 메뉴 들어가는 곳 -->
+		</nav>
+	</header>
+<!-- 	그림파일 들어가는곳 -->
+	<div id="sub_img">
+	</div>
+<!-- 	서브메뉴 들어가는곳 -->
+	<nav id="sub_menu">
+	</nav>
+<!-- 	실제 내용 콘텐츠가 들어가는 곳 -->
+	<article>
+	</article>
+<!-- 	푸터가 들어가는 곳 -->
+	<footer>
+	</footer>
+</body>
+</html>
